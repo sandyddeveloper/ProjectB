@@ -24,16 +24,13 @@ const Header = () => {
           />
         </div>
 
-        {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
-
-        {/* Navigation */}
         <nav
           className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out p-6 flex flex-col gap-y-6 md:static md:w-auto md:shadow-none md:bg-transparent md:flex-row md:items-center md:gap-x-9 ${menuOpen ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0`}
         >
-          {/* Close Button */}
+         
           <button
             className="absolute top-5 right-5 md:hidden"
             onClick={() => setMenuOpen(false)}
@@ -52,7 +49,6 @@ const Header = () => {
             ))}
           </ul>
 
-          {/* Sign In Button */}
           <button className="border-2 border-blue-500 px-6 py-3 rounded-full text-blue-500 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 w-full md:w-auto">
             Sign In
           </button>
